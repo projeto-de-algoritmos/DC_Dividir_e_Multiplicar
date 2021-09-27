@@ -1,0 +1,1 @@
+{"id":"8cc2f2ce-9075-4aea-80e1-36f5bc703374","space":5984,"runtime":"python3.7","name":"DC","path":"gf54rq","project":"b0eneeii","account":"144798365827","region":"sa-east-1","deps":["fastapi","uvicorn","matplotlib","pydantic","pyimgur","pandas","numpy","python-multipart","pillow"],"envs":null,"public":true,"log_level":"debug","cron":""}

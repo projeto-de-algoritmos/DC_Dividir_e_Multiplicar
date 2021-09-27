@@ -1,18 +1,16 @@
 from fastapi import HTTPException, status
+import matplotlib.pyplot as plt
 from Calculos import schemas
+import pandas as pd
+import random
 import numpy as np
 from io import BytesIO
+from base64 import b64encode
+import pyimgur
 import math
 
 def karatsuba(request: schemas.Numeros):
-	elementos = list(map(lambda x: bin(x)[2:], request.numeros))
-	while len(elementos) > 1:
-		result = Multiplicar(elementos[0],elementos[1])
-		if(len(elementos) > 2):
-			elementos = elementos[2:] 
-			elementos.append(bin(result)[2:])
-		else:
-			return {"Response" : result}
+	return Multiplicar(bin(request.numeros[0])[2:],bin(request.numeros[1])[2:])
 
 def Strassen(request: schemas.Matriz):
 	return {"Response": strassen(np.array(request.matrizA), np.array(request.matrizB)).tolist()}  
